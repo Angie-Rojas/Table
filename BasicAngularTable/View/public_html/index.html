@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app">
+      <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+            <style>
+                  table, th, td { border: 1px solid black;}
+            </style>
+            <script type="text/javascript" src="resources/js/angular182.js"></script>
+            <script type="text/javascript" src="resources/js/app.js"></script>
+            <title>index2</title>
+      </head>
+      <body ng-controller="controlador as lista">
+            <p>HOLA!!</p>
+            <input type="text" ng-model="nombre" /> hola {{apellido}}
+            <table><thead>
+                  <tr>
+                        <th>position</th>
+                        <th>name</th>
+                        <th>weight</th>
+                  </tr></thead>
+                  <tbody
+                  <tr ng-repeat="producto in lista.dataSource"> 
+                        <td>{{producto.aplicacion}}</td>
+                        <td>{{producto.nombreparametro}}</td>
+                        <td>{{producto.descripcion}}</td>
+                  </tr>
+                  </tbody>
+            </table>
+            <input type="button" value="Consultar" ng-click="lista.cosultarDatos()" />
+            <br/>
+            <p>{{lista.demo}}</p>
+      </body>
+</html>
